@@ -8,15 +8,15 @@ Gem::Specification.new do |spec|
 
   spec.summary       = Videogames
   spec.description   = Videogames
-  spec.homepage      =  www.linkedin.com/in/sean-lawrence-955a621b8
+  spec.homepage      =  "https://github.com/Seanyo89/Game_Hub"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.metadata["allowed_push_host"] = "https://github.com/Seanyo89/Game_Hub"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["homepage_uri"] = "https://github.com/Seanyo89/Game_Hub"
+  spec.metadata["source_code_uri"] = "https://github.com/Seanyo89/Game_Hub"
+  spec.metadata["changelog_uri"] = "https://github.com/Seanyo89/Game_Hub"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
