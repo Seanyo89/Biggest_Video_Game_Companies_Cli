@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Seanyo89"]
   spec.email         = ["seanolawrence_1989@icloud.com"]
 
-  spec.summary       = Videogames
-  spec.description   = Videogames
+  spec.summary       = "videogames"
+  spec.description   = 
   spec.homepage      =  "https://github.com/Seanyo89/Game_Hub"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

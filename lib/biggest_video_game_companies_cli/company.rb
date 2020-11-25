@@ -1,30 +1,30 @@
-class Company
+class BiggestVideoGameCompaniesCli::Company
+ attr_accessor :name, :position, :url
 
-    attr_accessor :name, :location, :twitter, :bio, :profile_url
+ def self.today
+   self.scrape_companies
+ end
+
   
-    @@all = []
+ def self.scrape_companies
+   companies = []
+   companies << self.scrape_alltopeverything
+      
+   companies
+ end
   
-    def initialize(company_hash)
-      company_hash.each do |attribute, value|
-        self.send("#{attribute}=", value)
-      end
-      @@all << self
-    end
+ def self.alltopeverything
+   doc = Nokogiri::HTML(open("https://alltopeverything.com/top-10-biggest-video-game-companies/"))
   
-    def self.create_from_collection(company_array)
-      company_array.each do |company_hash|
-        Company.new(company_hash)
-      end
-    end
+   company= self.new
+   company.name = doc.search("h3.company-title").text.strip
+   company.position = doc.search("div.kt-info-box").text.strip
+   company.url = doc.search("a.kt-blocks-info-box-learnmore info-box-link").first.attr("href").strip
+      
   
-    def add_company_attributes(attributes_hash)
-      attributes_hash.each do |attr, value|
-        self.send("#{attr}=", value)
-      end
-      self
-    end
-  
-    def self.all
-      @@all
-    end
+    company
   end
+  
+end
+  
+    
